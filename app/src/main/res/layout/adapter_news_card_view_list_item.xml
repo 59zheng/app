@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 xuexiangjys(xuexiangjys@163.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+<!--动态循环适配-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/xui_config_color_white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="true"
+    app:contentPaddingBottom="10dp"
+    app:contentPaddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:orientation="horizontal">
+
+                <com.xuexiang.xui.widget.imageview.RadiusImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher"
+                app:riv_is_circle="true" />
+
+                <LinearLayout
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        style="@style/TextStyle.Explain"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:textSize="@dimen/text_size_13"
+                        android:textColor="@color/xui_config_color_pure_black"
+                        tools:text="李大妈" />
+
+                    <TextView
+                        android:id="@+id/tv_user_login_time"
+                        android:textSize="@dimen/sp_10"
+                        style="@style/TextStyle.Explain"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/xui_btn_gray_normal_color"
+                        tools:text="1分钟前" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="right"
+                    >
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/home_page_guangzhu"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:layout_marginTop="10dp"
+                        android:text="+关注"
+                        android:textSize="@dimen/sp_10"
+                        android:textColor="@color/black"
+                        android:background="@drawable/bynamic_text"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_width="wrap_content" />
+            <TextView
+                android:id="@+id/Tag"
+                style="@style/TextStyle.Explain"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/text_size_13"
+                android:textColor="@color/fyc_config_color_green"
+                tools:text="#广场舞大全" />
+
+
+            <TextView
+                style="@style/TextStyle.Explain"
+                android:id="@+id/dynamic_text"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:textColor="@color/xui_config_color_pure_black"
+                android:textSize="13sp"
+                tools:text="跳的不专业其实就是个精气神,闺女给拍的希望大家喜欢,见笑" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:id="@+id/home_page_list"
+            >
+
+            <com.xuexiang.xui.widget.imageview.nine.NineGridImageView
+                android:id="@+id/ngl_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ngiv_imgGap="6dp"
+                app:ngiv_showStyle="fill"
+                app:ngiv_singleImgSize="240dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_width="wrap_content" />
+        <TextView
+            android:id="@+id/positioning"
+            style="@style/TextStyle.Explain"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/fyc_config_color_green"
+            tools:text="太原市" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/news_forward"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_zhuanfa"
+                    android:layout_marginLeft="15dp"/>
+
+
+                <TextView
+                    style="@style/TextStyle.Explain"
+                    android:id="@+id/tv_praise"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    tools:text="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/home_comment"
+                    android:src="@drawable/ic_message" />
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    style="@style/TextStyle.Explain"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    tools:text="156" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+
+
+                >
+
+                <ImageView
+                    android:id="@+id/home_good_picture"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_good" />
+
+                <TextView
+                    android:id="@+id/home_good"
+                    style="@style/TextStyle.Explain"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    tools:text="356"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

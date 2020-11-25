@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#ffffff</color>
+
+    <color name="colorPrimaryDark">#eeeeee</color>
+
+
+    <color name="xui_config_color_content_text">@color/black</color>
+
+
+
+
+<!--    默认选中的颜色-->
+    <color name="colorAccent">#70cd86</color>
+    <!--跳过点击按钮的颜色-->
+    <color name="colorBanTransparent">#DCE9F1</color>
+
+    <color name="fyc_config_color_green">#48d27c</color>
+
+
+    <!--Toast，可自定义喜欢的颜色-->
+    <!--    ,默认文本颜色-->
+    <color name="toast_default_text_color" tools:ignore="PrivateResource">
+        @color/xui_config_color_white
+    </color>
+    <!--报错颜色-->
+    <color name="toast_error_color" tools:ignore="PrivateResource">@color/xui_config_color_red
+    </color>
+    <!--提示颜色-->
+    <color name="toast_info_color" tools:ignore="PrivateResource">@color/colorAccent</color>
+    <!--成功颜色-->
+    <color name="toast_success_color" tools:ignore="PrivateResource">#388E3C</color>
+    <!--警告颜色-->
+    <color name="toast_warning_color" tools:ignore="PrivateResource">
+        @color/xui_config_color_waring
+    </color>
+    <!--正常颜色-->
+    <color name="toast_normal_tint_color" tools:ignore="PrivateResource">#353A3E</color>
+    <!--按钮颜色-->
+    <color name="green_btn_color_normal">#2BCFB8</color>
+    <color name="green_btn_color_disable">#CCCCCC</color>
+    <color name="green_btn_color_pressed">#05bca2</color>
+
+    <color name="search_page_gray">#f0f0f0</color>
+
+<!--    首页图标未选中颜色-->
+    <color name="home_text_no_click">#999999</color>
+
+    <!--    首页图标选中颜色-->
+    <color name="home_text_click">#70cd86</color>
+<!--    评论的背景颜色-->
+    <color name="comment_bround">#ffffff</color>
+
+    <!--评论-->
+
+    <color name="gray_d8">#ffd8d8d8</color>
+    <color name="color_6f">#6f6f6f</color>
+
+    <color name="gray_9b">#9B9B9B</color>
+    <color name="black_21">#212121</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="app_color_theme_1">#70cd86</color>
+    <color name="color_f4">#F4F4F4</color> <!-- Grapefruit -->
+    <!-- 暗宝石绿 -->
+    <color name="middleblue">#5f9cf9</color>
+
+    <!-- 蓟色 -->
+    <color name="lightgray">#eef2f5</color>
+
+
+</resources>

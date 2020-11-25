@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <!--  ViewPager，页面填充页  -->
+
+    <!--  底部导航栏  -->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+    <!--下部导航栏-->
+    <com.jpeng.jptabbar.JPTabBar
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:layout_gravity="bottom"
+        app:tab_animate="Scale"
+        app:tab_pressAnimateEnable="true"
+        app:tab_normalColor="@color/home_text_no_click"
+        app:tab_selectColor="@color/home_text_click"
+        app:tab_middleView="@layout/layout_jptabbar_middle_view" />
+
+<!-- <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?actionBarSize"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:itemIconTint="@color/color_state_menu_navi"-->
+<!--        app:itemTextColor="@color/color_state_menu_navi"-->
+<!--        android:background="@color/xui_config_color_white"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:menu="@menu/menu_navigation_bottom" />-->
+
+
+</FrameLayout>

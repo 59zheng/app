@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 xuexiangjys(xuexiangjys@163.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal">
+
+            <com.xuexiang.xui.widget.banner.widget.banner.SimpleImageBanner
+                android:id="@+id/sib_simple_usage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bb_isIndicatorShow="false"
+                app:bb_scale="0.5625" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <!-- Text style "" -->
+            <!-- Add this snippet to styles.xml. -->
+
+            <!-- TextView "" -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="农田"
+                android:textColor="@color/white"
+                android:textSize="29sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+               >
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@mipmap/weizhi">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/posit"
+                    android:layout_marginStart="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="平陆县"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+       <!-- <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bynamic_text"
+            android:gravity="right"
+            android:paddingTop="2dp">
+
+&lt;!&ndash;            <TextView
+                android:id="@+id/trending_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="运行记录"
+                android:textColor="@color/home_text_click"
+                android:textSize="@dimen/text_size_13">
+
+            </TextView>&ndash;&gt;
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ll_task_manager_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="160dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/profile_bj"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@mipmap/taiyang">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="40dp"
+                        android:background="#e4e4e4">
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="温度(℃)"
+                            android:textColor="#9e9e9e"
+                            android:textSize="@dimen/text_size_12"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="26"
+                            android:textColor="#6fad00"
+                            android:textSize="@dimen/text_size_16" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="40dp"
+                        android:background="#e4e4e4">
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PM2.5"
+                            android:textColor="#9e9e9e"
+                            android:textSize="@dimen/text_size_12"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="68"
+                            android:textColor="#6fad00"
+                            android:textSize="@dimen/text_size_16" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="40dp"
+                        android:background="#e4e4e4">
+                    </View>
+
+                    <LinearLayout
+                        android:id="@+id/my_dynamic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="风向(级)"
+                            android:textColor="#9e9e9e"
+                            android:textSize="@dimen/text_size_12"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="北风四级"
+                            android:textColor="#6fad00"
+                            android:textSize="@dimen/text_size_13" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

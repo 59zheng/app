@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 xuexiangjys(xuexiangjys@163.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地区选择:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_13"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/btn_pickerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:enabled="false"
+            />
+
+                <ImageView
+                    android:id="@+id/btn_picker"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_botton">
+
+                </ImageView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详细地址："
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_13"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_basic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:hint="请输入详细地址"
+                   />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/open_map"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地图信息"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_13"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:orientation="horizontal"
+               >
+
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已获取:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/profile_bj"
+                    android:backgroundTint="@color/gray_9b"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/map_text_lat"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12">
+
+
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/profile_bj"
+                    android:backgroundTint="@color/gray_9b"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/map_text_lon"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12">
+
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择产品类别:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/btn_type_text"
+                    android:layout_width="0dp"
+                    android:textAlignment="textEnd"
+                    android:enabled="false"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6" />
+
+                <ImageView
+                    android:id="@+id/btn_type"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_botton">
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择产品:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+
+
+                <EditText
+                    android:id="@+id/btn_product_text"
+                    android:layout_width="0dp"
+                    android:textAlignment="textEnd"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:layout_weight="6" />
+
+                <ImageView
+                    android:id="@+id/btn_product"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_botton">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="备注:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+
+                <com.xuexiang.xui.widget.edittext.MultiLineEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/comment_sh"
+                    android:backgroundTint="@color/gray_d8"
+                    app:mlet_hintText="请输入备注信息"
+                    app:mlet_hintTextColor="@color/gray_9b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/yes"
+                android:background="@drawable/bynamic_text"
+                android:backgroundTint="@color/xui_round_btn_green_bg"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/trending_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="完成"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

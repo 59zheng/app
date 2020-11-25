@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xuexiang.templateproject">
+
+    <!--进程杀死-->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="false"
+        android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme"
+
+        android:windowSoftInputMode="adjustPan|stateHidden"
+        tools:ignore="LockedOrientationActivity">
+        <!--启动页-->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Launch.App"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+            <!--            主页-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+        <!--        主页-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- 引导页 -->
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActivityFullscreen" />
+
+        <!-- 登录页 -->
+        <activity android:name=".activity.LoginActivity" />
+
+        <!-- 获取权限 -->
+        <activity android:name=".activity.PermissionsActivity"/>
+
+        <!--沉浸式状态栏-->
+        <!--通用浏览器-->
+        <activity
+            android:name=".core.webview.AgentWebActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_browser_name"
+            android:theme="@style/AppTheme">
+            <!-- Scheme -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="com.xuexiang.xui.applink" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="about" />
+                <data android:scheme="javascript" />
+                <!--   设置自己的deeplink   -->
+                <!--                <data-->
+                <!--                    android:host="xxx.com"-->
+                <!--                    android:scheme="xui"/>-->
+            </intent-filter>
+            <!-- AppLink -->
+            <intent-filter
+                android:autoVerify="true"
+                tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="inline" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/xhtml+xml" />
+                <data android:mimeType="application/vnd.wap.xhtml+xml" />
+                <!--   设置自己的applink   -->
+                <!--                <data-->
+                <!--                    android:host="xxx.com"-->
+                <!--                    android:scheme="http"/>-->
+                <!--                <data-->
+                <!--                    android:host="xxx.com"-->
+                <!--                    android:scheme="https"/>-->
+            </intent-filter>
+        </activity>
+
+        <!--fragment的页面容器-->
+        <activity
+            android:name=".core.BaseActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 版本更新提示-->
+        <activity
+            android:name=".utils.update.UpdateTipDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
+        <!-- Webview拦截提示弹窗-->
+        <activity
+            android:name=".core.webview.WebViewInterceptDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
+        <!-- applink的中转页面 -->
+        <activity
+            android:name=".core.XPageTransferActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!--屏幕自适应设计图-->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+        <!--开始引导页-->
+
+        <!--百度地图api-->
+        <!--//添加开发密钥-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="aDGyk5pBnfVD6KhMoXKNypiuLG2in7Gn"/>
+
+    </application>
+    <!-- 访问网络，进行地图相关业务数据请求，包括地图数据，路线规划，POI检索等 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取网络状态，根据网络状态切换进行数据请求网络转换 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 读取外置存储。如果开发者使用了so动态加载功能并且把so文件放在了外置存储区域，则需要申请该权限，否则不需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 写外置存储。如果开发者使用了离线地图，并且数据写在外置存储区域，则需要申请该权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--百度地图api-->
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+    </uses-permission>
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+    </uses-permission>
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+    </uses-permission>
+    <!--用于申请获取蓝牙信息进行室内定位-->
+
+
+
+</manifest>

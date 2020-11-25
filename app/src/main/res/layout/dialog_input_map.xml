@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 xuexiangjys(xuexiangjys@163.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/transparent"-->
+<!--    android:orientation="vertical">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:adroid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="532dp"
+    android:layout_alignParentBottom="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    adroid:background="@drawable/comment_sh">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etMLCityPoiText"
+            android:layout_width="300dp"
+            android:layout_height="36dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/merchants_service_comment_edit_bg"
+            android:drawableLeft="@drawable/circle_icon_box_04"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:gravity="center">
+
+            <com.xuexiang.xui.widget.textview.autofit.AutoFitTextView
+                android:id="@+id/close"
+                style="@style/TextStyle.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="取消"
+                android:textColor="@color/xui_config_color_pure_black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+        <ListView
+            android:id="@+id/lvMLCityPoi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/etMLCityPoiText"
+            android:layout_margin="5dp"
+            android:cacheColorHint="@color/transparent"
+            android:dividerHeight="2dp"
+            android:fastScrollEnabled="true"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:visibility="gone">
+        </ListView>
+    </LinearLayout>
+
+
+</LinearLayout><!--</RelativeLayout>-->

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2020 xuexiangjys(xuexiangjys@163.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="25dp"
+android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/dynamic_text"
+        style="@style/Button.Primary.wrap"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:text="发布"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:typeface="normal" />
+
+    <com.xuexiang.xui.widget.edittext.MultiLineEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mlet_hintText="记录这一刻"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/xui_config_content_spacing_horizontal"
+        android:overScrollMode="never" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="80dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="81dp"
+         android:background="@mipmap/tread_bi"
+        >
+         <!-- Style for "9" -->
+         <!-- Add this snippet to layer-list xml in drawable. -->
+
+         <LinearLayout
+
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="start"
+             android:layout_weight="1"
+             android:orientation="vertical"
+             android:paddingTop="25dp">
+
+             <ImageView
+                 android:layout_width="25dp"
+                 android:layout_height="20dp"
+                 android:layout_gravity="center_horizontal"
+                 android:src="@drawable/img"
+                 android:id="@+id/button"
+                 >
+             </ImageView>
+
+             <TextView
+                 android:layout_width="27dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:gravity="left"
+                 android:text="相册"
+                 android:textColor="#000000"
+                 android:textSize="13sp"
+                 />
+
+
+
+
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="start"
+             android:layout_weight="1"
+             android:orientation="vertical"
+
+             android:paddingTop="25dp">
+
+             <ImageView
+                 android:layout_width="25dp"
+                 android:layout_height="20dp"
+                 android:layout_gravity="center_horizontal"
+                 android:src="@drawable/img2"
+                 android:id="@+id/button_paizhao"
+                 >
+             </ImageView>
+
+             <TextView
+                 android:layout_width="27dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:gravity="left"
+                 android:text="拍摄"
+                 android:textColor="#000000"
+                 android:textSize="13sp"
+               />
+
+
+
+
+
+         </LinearLayout>
+
+         <LinearLayout
+
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="start"
+             android:layout_weight="1"
+             android:orientation="vertical"
+             android:paddingTop="25dp">
+
+             <ImageView
+                 android:layout_width="25dp"
+                 android:layout_height="20dp"
+                 android:layout_gravity="center_horizontal"
+                 android:src="@drawable/img3"
+                 android:id="@+id/button_quanxian"
+                 >
+             </ImageView>
+
+             <TextView
+                 android:layout_width="27dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:gravity="left"
+                 android:text="权限"
+                 android:textColor="#000000"
+                 android:textSize="13sp"
+                  />
+
+         </LinearLayout>
+
+         <LinearLayout
+
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="start"
+             android:layout_weight="1"
+             android:orientation="vertical"
+             android:paddingTop="25dp">
+
+             <ImageView
+                 android:layout_width="25dp"
+                 android:layout_height="20dp"
+                 android:layout_gravity="center_horizontal"
+                 android:src="@drawable/img4"
+                 android:id="@+id/button_biaoqian"
+                 >
+             </ImageView>
+
+             <TextView
+                 android:layout_width="27dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:gravity="left"
+                 android:text="标签"
+                 android:textColor="#000000"
+                 android:textSize="13sp"
+             />
+
+
+
+
+
+         </LinearLayout>
+         <LinearLayout
+
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="start"
+             android:layout_weight="1"
+             android:orientation="vertical"
+             android:paddingTop="25dp">
+
+             <ImageView
+                 android:layout_width="25dp"
+                 android:layout_height="20dp"
+                 android:layout_gravity="center_horizontal"
+                 android:src="@drawable/img5"
+                 android:id="@+id/button_weizhi"
+                 >
+             </ImageView>
+
+             <TextView
+                 android:layout_width="27dp"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:gravity="left"
+                 android:text="位置"
+                 android:textColor="#000000"
+                 android:textSize="13sp"
+                  />
+
+
+
+
+
+         </LinearLayout>
+
+
+     </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
